@@ -27,6 +27,11 @@ To Deploy to GitHub:
 
 ``npm install -D gh-pages``
 
+Add this to your package.json "scripts":
+
+``"predeploy": "npm run build",``
+``"deploy": "gh-pages -d build"``
+
 ``npm run deploy``
 
 Then add, commit and push to ``GitHub``.
