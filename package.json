@@ -19,8 +19,8 @@
   },
   "eslintConfig": {
     "extends": [
-      "react-app",
-      "react-app/jest"
+      "profile-app",
+      "profile-app/jest"
     ]
   },
   "homepage": "http://nchow18.github.io/profile-app",
