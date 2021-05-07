@@ -32,6 +32,8 @@ Add this to your package.json "scripts":
 ``"predeploy": "npm run build",``
 ``"deploy": "gh-pages -d build"``
 
+then,
+
 ``npm run deploy``
 
 Then add, commit and push to ``GitHub``.
