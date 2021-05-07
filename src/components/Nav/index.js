@@ -9,18 +9,16 @@ function Nav(props) {
   } = props
 
   return (
-    <header>
       <nav>
         {links.map((link) => (
           <li
-            className={`list-link ${currentLink.name === link.name && `navActive`}`} key={link.name}>
-            <a href={link.href} className="link" onClick={() => {
+            className="list-link">
+            <a href={link.href} className={`link ${currentLink.name === link.name && `navActive`}`} key={link.name} onClick={() => {
               setCurrentLink(link);
             }}>{link.name}</a>
           </li>
         ))}
       </nav>
-    </header>
   );
 }
 

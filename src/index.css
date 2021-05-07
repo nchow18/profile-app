@@ -4,16 +4,21 @@ header {
   width: 100%;
   top: 0;
   left: 0;
-  background-color: white;
-  padding-top: 1rem;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgb(189, 189, 189)
 }
 
 footer {
-  position: -webkit-sticky;
-  position: sticky;
+  position: absolute;
   bottom: 0;
   left: 0;
-  background-color: white;
   display: flex;
   justify-content: center;
   width: 100%;
@@ -44,11 +49,11 @@ h1 {
 }
 
 section {
-  padding-top: 5rem;
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding-bottom: 5rem;
+  box-shadow: 10px 10px 40px rgb(0,0,0,0.75);
+  margin-top: 10rem;
 }
 
 .resume-download {
@@ -91,25 +96,41 @@ a {
 }
 
 .navActive {
-  background-color: pink;
+  color: white;
 }
 
 nav {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  margin: 2rem;
+  padding: 2rem;
 }
 
 #about-me {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  background-color: white;
+  width: auto;
+}
+
+.about-me-container {
+  grid-column: 1 /span 1;
+  width: 100%;
   display: flex;
+  margin: 2rem;
   flex-direction: column;
-  flex-wrap: wrap;
+}
+
+.about-picture-container {
+  grid-column: 2 / span 1;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .profile-img {
-  width: 15rem;
-  padding: 2rem;
+  object-fit: cover;
+  height: 45rem;
 }
 
 #portfolio {

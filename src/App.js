@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-
 import About from './components/About';
 import Portfolio from './components/Portfolio';
 import ContactForm from './components/Contact';
@@ -24,27 +23,40 @@ function App() {
     },
     {
       name: 'Contact',
-      href: '#contact'
+      href: '#contact-form'
     }
 
   ])
 
   const [currentLink, setCurrentLink] = useState(links[0]);
 
+  console.log(links[0].name)
+  console.log(currentLink.name);
+
   return (
-    <div>
-      <Nav 
-        links={links}
-        currentLink={currentLink}
-        setCurrentLink={setCurrentLink}
-        >
-      </Nav>
+    <div className="content">
+      <header>
+        <Nav 
+          links={links}
+          currentLink={currentLink}
+          setCurrentLink={setCurrentLink}
+          >
+        </Nav>
+      </header>
       <main className="page">
         <div className="page-width">
-          <About></About>
-          <Portfolio></Portfolio>
-          <Resume></Resume>
-          <ContactForm></ContactForm>
+          {currentLink.name === links[0].name && (
+            <About />
+          )}
+          {currentLink.name === links[1].name && (
+            <Portfolio />
+          )}
+          {currentLink.name === links[2].name && (
+            <Resume />
+          )}
+          {currentLink.name === links[3].name && (
+            <ContactForm />
+          )}
         </div>
       </main>
       <footer>
