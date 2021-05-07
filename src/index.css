@@ -1,0 +1,102 @@
+header {
+  position: -webkit-sticky;
+  position: sticky;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: white;
+  padding-top: 1rem;
+}
+
+.page {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.page-width {
+  min-width: 450px;
+  max-width: 1150px;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+section {
+  padding-top: 5rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 5rem;
+}
+
+.resume-download {
+  background-color: yellow;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.img-size {
+  height: 15rem;
+  width: 20rem;
+}
+
+.img-container {
+  margin: 1rem;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-right: 2rem;
+  margin-left: 2rem;
+}
+
+li {
+  list-style: none;
+  font-size: 1.25rem;
+}
+
+a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: black;
+}
+
+.link {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.navActive {
+  background-color: pink;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin: 2rem;
+}
+
+#about-me {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.profile-img {
+  width: 15rem;
+  padding: 2rem;
+}
+
+#portfolio {
+  display: flex;
+  flex-direction: column;
+}
+
+span {
+  font-size: 1.5rem
+}
