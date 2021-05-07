@@ -12,32 +12,38 @@ function Portfolio() {
     {
       name: 'Day Scheduler',
       link: 'https://nchow18.github.io/work-day-scheduler/',
-      img: Photo0
+      img: Photo0,
+      github: 'https://github.com/nchow18/work-day-scheduler',
     },
     {
       name: 'Envoy',
       link: 'https://envoy-guide.herokuapp.com/',
-      img: Photo1
+      img: Photo1,
+      github: 'https://github.com/Envoy-products',
     },
     {
       name: 'King Seafood',
       link: 'https://nchow18.github.io/king-seafood/',
-      img: Photo2
+      img: Photo2,
+      github: 'https://github.com/nchow18/king-seafood',
     },
     {
       name: 'Tech Blog',
       link: 'https://tech-blog-2021.herokuapp.com/',
-      img: Photo3
+      img: Photo3,
+      github: 'https://github.com/nchow18/tech-blog',
     },
     {
       name: 'Mortgages',
       link: 'https://nchow18.github.io/mortgages/',
-      img: Photo4
+      img: Photo4,
+      github: 'https://github.com/nchow18/mortgages',
     },
     {
       name: 'Screen Genius',
       link: 'https://screen-genius.github.io/',
-      img: Photo5
+      img: Photo5,
+      github: '',
     }
   ])
 
@@ -47,8 +53,8 @@ function Portfolio() {
       <div className="flex-container">
         {categories.map((category, i) => (
           <div className="img-container">
-            <li><a href={category.link}>{category.name}</a></li>
-            <img className="img-size" alt={category.name} src={category.img} />
+            <li><a href={category.github}>{category.name} - GitHub Link</a></li>
+            <a href={category.link}><img className="img-size" alt={category.name} src={category.img} /></a>
           </div>
         ))}
       </div>

@@ -8,6 +8,26 @@ header {
   padding-top: 1rem;
 }
 
+footer {
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.footer-container {
+  display: flex;
+  align-items: center;
+}
+
+.footer-icon {
+  margin: 1rem;
+}
+
 .page {
   display: flex;
   align-items: center;
