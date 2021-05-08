@@ -64,14 +64,20 @@ section {
 }
 
 .resume-download {
-  padding: 2rem;
+  padding: 1rem;
+  margin: 2rem;
   margin-bottom: 2rem;
   font-weight: bold;
-  text-shadow: 5px 5px 10px rgb(0,0,0,0.80);
+  background-color: black;
+  border-radius: 20px;
+}
+
+.resume-download:hover {
+  box-shadow: 10px 10px 20px rgb(0,0,0,0.45);
 }
 
 .resume-font {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .resume-list {
