@@ -19,11 +19,11 @@ function Resume() {
           </div>
 
           <a className="resume-download" href={ResumeDownload} download>
-            <span>RESUME DOWNLOAD</span>
+            <span className="resume-font">RESUME DOWNLOAD</span>
           </a>
           <div className="resume-list">
           <span>Proficiencies:</span>
-            <ol>
+            <ul>
               <li>CSS</li>
               <li>Javascript</li>
               <li>MongoDB</li>
@@ -37,7 +37,7 @@ function Resume() {
               <li>SQL</li>
               <li>Express.js</li>
               <li>Web API</li>
-            </ol>
+            </ul>
           </div>
         </div>
 

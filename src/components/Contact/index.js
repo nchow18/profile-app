@@ -40,27 +40,31 @@ function ContactForm() {
 
     return (
         <section>
-            <h1>Contact me</h1>
-            <form id="contact-form" onSubmit={handleSubmit}>
-            <div>
-                <label htmlFor="name">Name:</label>
-                <input type="text" defaultValue={name} onChange={handleChange} name="name" />
-            </div>
-            <div>
-                <label htmlFor="email">Email address:</label>
-                <input defaultValue={email} onChange={handleChange} type="email" name="email" />
-            </div>
-            <div>
-                <label htmlFor="message">Message:</label>
-                <textarea defaultValue={message} onChange={handleChange} name="message" rows="5"  />
-            </div>
-                {errorMessage && (
-                <div>
-                <p className="error-text">{errorMessage}</p>
+            <div className="center-card">
+                <h1>Contact me</h1>
+                <form id="contact-form" onSubmit={handleSubmit}>
+                <div className="contact-column">
+                    <label htmlFor="name">Name:</label>
+                    <input type="text" defaultValue={name} onChange={handleChange} name="name" />
                 </div>
-                )}
-            <button type="submit">Submit</button>
-            </form>
+                <div className="contact-column">
+                    <label htmlFor="email">Email address:</label>
+                    <input defaultValue={email} onChange={handleChange} type="email" name="email" />
+                </div>
+                <div className="contact-column">
+                    <label htmlFor="message">Message:</label>
+                    <textarea defaultValue={message} onChange={handleChange} name="message" rows="5"  />
+                </div>
+                    {errorMessage && (
+                    <div>
+                    <p className="error-text">{errorMessage}</p>
+                    </div>
+                    )}
+                <button type="submit">Submit</button>
+                </form>
+            </div>
+            <div id="background-img4"></div>
+            <div id="pop-background2"></div> 
         </section>
     )
 }
