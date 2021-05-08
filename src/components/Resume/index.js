@@ -14,8 +14,6 @@ function Resume() {
       <div className="center-vh">
         <div className="center-page">
           <div className="center-flex">
-            <a href="https://github.com/nchow18"><Icon icon={githubIcon} width="150" height="150"/></a>
-            <a href="https://www.linkedin.com/in/nathan-chow-1999701b9/"><Icon icon={linkedinIcon} width="150" height="150"/></a>
           </div>
 
           <a className="resume-download" href={ResumeDownload} download>

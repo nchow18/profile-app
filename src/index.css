@@ -10,7 +10,7 @@ header {
   width: 100%;
   top: 0;
   left: 0;
-  z-index: 20;
+  z-index: 30;
 }
 
 .content {
@@ -151,6 +151,7 @@ nav {
   flex-direction: row;
   justify-content: flex-end;
   padding: 2rem;
+  z-index: 20;
 }
 
 .page-display {
