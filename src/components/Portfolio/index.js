@@ -49,16 +49,20 @@ function Portfolio() {
 
   return (
     <section id="portfolio">
-      <h1>Portfolio</h1>
-      <div className="flex-container">
-        {categories.map((category, i) => (
-          <div className="img-container">
-            <li><a href={category.github}>{category.name} - GitHub Link</a></li>
-            <a href={category.link}><img className="img-size" alt={category.name} src={category.img} /></a>
+      <div className="page-blur">
+          <div className="page-display-flex">
+          <h1>Portfolio</h1>
+          <div className="flex-container">
+            {categories.map((category, i) => (
+              <div className="img-container">
+                <li><a href={category.github} className="font-white">{category.name} - GitHub Link</a></li>
+                <a href={category.link}><img className="img-size" alt={category.name} src={category.img} /></a>
+              </div>
+            ))}
           </div>
-        ))}
+        </div>
       </div>
-
+      <div id="background-img2"></div>
     </section>
   );
 }

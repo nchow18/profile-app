@@ -10,30 +10,40 @@ function Resume() {
 
   return (
     <section id="resume">
-      <h1>Resume</h1>
-      <span>Developers Social Media</span>
-      <a href="https://github.com/nchow18"><Icon icon={githubIcon} width="150" height="150"/></a>
-      <a href="https://www.linkedin.com/in/nathan-chow-1999701b9/"><Icon icon={linkedinIcon} width="150" height="150"/></a>
-      <a className="resume-download" href={ResumeDownload} download>
-        <span>RESUME DOWNLOAD</span>
-      </a>
-      <span>Proficiencies:</span>
-      <ol>
-        <li>CSS</li>
-        <li>Javascript</li>
-        <li>MongoDB</li>
-        <li>IndexDB</li>
-        <li>Database</li>
-        <li>React</li>
-        <li>NoSQL</li>
-        <li>PWA - Progressive Web Application</li>
-        <li>MVC - Model-View-Controller</li>
-        <li>ORM - Object Relational Mapping</li>
-        <li>SQL</li>
-        <li>Express.js</li>
-        <li>Web API</li>
+      <div id="background-img"></div>
+      <div className="center-vh">
+        <div className="center-page">
+          <div className="center-flex">
+            <a href="https://github.com/nchow18"><Icon icon={githubIcon} width="150" height="150"/></a>
+            <a href="https://www.linkedin.com/in/nathan-chow-1999701b9/"><Icon icon={linkedinIcon} width="150" height="150"/></a>
+          </div>
 
-      </ol>
+          <a className="resume-download" href={ResumeDownload} download>
+            <span>RESUME DOWNLOAD</span>
+          </a>
+          <div className="resume-list">
+          <span>Proficiencies:</span>
+            <ol>
+              <li>CSS</li>
+              <li>Javascript</li>
+              <li>MongoDB</li>
+              <li>IndexDB</li>
+              <li>Database</li>
+              <li>React</li>
+              <li>NoSQL</li>
+              <li>PWA - Progressive Web Application</li>
+              <li>MVC - Model-View-Controller</li>
+              <li>ORM - Object Relational Mapping</li>
+              <li>SQL</li>
+              <li>Express.js</li>
+              <li>Web API</li>
+            </ol>
+          </div>
+        </div>
+
+      </div>
+      <div id="pop-background"></div>  
+
     </section>
   );
 };
