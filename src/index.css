@@ -34,10 +34,14 @@ footer {
 .footer-container {
   display: flex;
   align-items: center;
+  background-color: rgba(255, 255, 255, 0.75);
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  padding: .5rem 1rem 0 1rem;
 }
 
 .footer-icon {
-  margin: 1rem;
+  margin: .5rem;
 }
 
 .page {
@@ -155,8 +159,8 @@ nav {
   max-width: 900px;
   margin-top: 10rem;
   box-shadow: 10px 10px 40px rgb(0,0,0,0.75);
-  max-height: 713px;
-  background-color: rgb(0,0,0,0.30);
+  max-height: 500px;
+  background-color: rgb(0,0,0,0.70);
   border-radius: 15px;
 }
 
@@ -184,8 +188,8 @@ nav {
 }
 
 .profile-img {
-  height: 100%;
-  object-fit: contain;
+  height: 500px;
+  object-fit: cover;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
 }
