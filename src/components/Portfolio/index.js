@@ -5,6 +5,7 @@ import Photo2 from '../../assets/img/2.png';
 import Photo3 from '../../assets/img/3.png';
 import Photo4 from '../../assets/img/4.png';
 import Photo5 from '../../assets/img/5.png';
+import Photo6 from '../../assets/img/6.png';
 
 function Portfolio() {
 
@@ -44,6 +45,12 @@ function Portfolio() {
       link: 'https://screen-genius.github.io/',
       img: Photo5,
       github: '',
+    },
+    {
+      name: 'Woof',
+      link: 'https://woof-2021.herokuapp.com',
+      img: Photo6,
+      github: 'https://github.com/woof-board/woof',
     }
   ])
 
