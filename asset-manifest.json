@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/profile-app/static/css/main.c7ce4911.chunk.css",
-    "main.js": "/profile-app/static/js/main.57bf0a84.chunk.js",
-    "main.js.map": "/profile-app/static/js/main.57bf0a84.chunk.js.map",
+    "main.js": "/profile-app/static/js/main.dd11b8d0.chunk.js",
+    "main.js.map": "/profile-app/static/js/main.dd11b8d0.chunk.js.map",
     "runtime-main.js": "/profile-app/static/js/runtime-main.f053eb87.js",
     "runtime-main.js.map": "/profile-app/static/js/runtime-main.f053eb87.js.map",
     "static/js/2.a50c5c61.chunk.js": "/profile-app/static/js/2.a50c5c61.chunk.js",
@@ -18,6 +18,7 @@
     "static/media/3.c94c83cd.png": "/profile-app/static/media/3.c94c83cd.png",
     "static/media/4.c1ab32e2.png": "/profile-app/static/media/4.c1ab32e2.png",
     "static/media/5.17788960.png": "/profile-app/static/media/5.17788960.png",
+    "static/media/6.4b77f05b.png": "/profile-app/static/media/6.4b77f05b.png",
     "static/media/index.css": "/profile-app/static/media/background9.8dc7230c.jpg",
     "static/media/profile.13b77fdd.JPG": "/profile-app/static/media/profile.13b77fdd.JPG",
     "static/media/resume.05bdcfb4.pdf": "/profile-app/static/media/resume.05bdcfb4.pdf"
@@ -26,6 +27,6 @@
     "static/js/runtime-main.f053eb87.js",
     "static/js/2.a50c5c61.chunk.js",
     "static/css/main.c7ce4911.chunk.css",
-    "static/js/main.57bf0a84.chunk.js"
+    "static/js/main.dd11b8d0.chunk.js"
   ]
 }
