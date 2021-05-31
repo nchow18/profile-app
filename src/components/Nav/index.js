@@ -1,24 +1,13 @@
 import React from 'react';
+import { Link} from 'react-router-dom'
+import '../../css/Header.css';
+import Dropdown from '../../components/Nav/Dropdown';
 
-function Nav(props) {
-
-  const {
-    links = [],
-    setCurrentLink,
-    currentLink
-  } = props
+function Nav() {
 
   return (
-      <nav>
-        {links.map((link) => (
-          <li
-            className="list-link">
-            <a href={link.href} className={`link ${currentLink.name === link.name && `navActive`}`} key={link.name} onClick={() => {
-              setCurrentLink(link);
-            }}>{link.name}</a>
-          </li>
-        ))}
-      </nav>
+    <>
+    </>
   );
 }
 

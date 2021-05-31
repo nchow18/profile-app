@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import Photo0 from '../../assets/img/0.png';
-import Photo1 from '../../assets/img/1.png';
-import Photo2 from '../../assets/img/2.png';
-import Photo3 from '../../assets/img/3.png';
-import Photo4 from '../../assets/img/4.png';
-import Photo5 from '../../assets/img/5.png';
-import Photo6 from '../../assets/img/6.png';
+import Photo0 from '../assets/img/0.png';
+import Photo1 from '../assets/img/1.png';
+import Photo2 from '../assets/img/2.png';
+import Photo3 from '../assets/img/3.png';
+import Photo4 from '../assets/img/4.png';
+import Photo5 from '../assets/img/5.png';
+import Photo6 from '../assets/img/6.png';
 
 function Portfolio() {
 
@@ -56,20 +56,7 @@ function Portfolio() {
 
   return (
     <section id="portfolio">
-      <div className="page-blur">
-          <div className="page-display-flex">
-          <h1>Portfolio</h1>
-          <div className="flex-container">
-            {categories.map((category, i) => (
-              <div className="img-container">
-                <li><a href={category.github} className="font-white">{category.name} - GitHub Link</a></li>
-                <a href={category.link}><img className="img-size" alt={category.name} src={category.img} /></a>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-      <div id="background-img2"></div>
+      PORTFOLIO
     </section>
   );
 }
