@@ -132,7 +132,7 @@
 
 .project-info-button {
   margin-left: 1rem;
-  animation: infoButton 1.5s forwards;
+  animation: infoButton 2s forwards;
   animation-timing-function: var(--cubic);
   animation-direction: normal;
 }
@@ -150,7 +150,7 @@
 
 @keyframes projectRight {
   from {
-    transform: translateX(-50vw)
+    transform: translateX(-150vw)
   }
   to {
     transform: translateX(0w);

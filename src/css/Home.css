@@ -13,3 +13,9 @@
     font-size: 2rem;
   }
 }
+
+@media screen and (max-width: 450px) {
+  .home-font {
+    font-size: 1.5rem;
+  }
+}
