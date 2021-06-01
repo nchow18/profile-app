@@ -3,7 +3,254 @@
 }
 
 .about-profile-img {
-  height: 20rem;
-  width: 20rem;
+  height: 15rem;
+  width: 15rem;
   object-fit: cover;
+}
+
+.airplane-img {
+  height: 10rem;
+  width: 10rem;
+  position: fixed;
+  bottom: 20rem;
+  left: 10rem;
+  animation: plane 1s linear infinite;
+  animation-direction: alternate;
+  animation-timing-function: cubic-bezier(.62,.27,.56,.92);
+  animation-iteration-count: infinite;
+  animation-play-state: running
+}
+
+.cloud1-img {
+  height: 4rem;
+  width: 4rem;
+  position: fixed;
+  right: 0;
+  bottom: 25rem;
+  animation: cloud1 3s linear infinite;
+  animation-direction: normal;
+  animation-timing-function: cubic-bezier(.62,.27,.56,.92);
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+}
+
+.cloud2-img {
+  height: 4rem;
+  width: 4rem;
+  position: fixed;
+  right: 0;
+  bottom: 23rem;
+  animation: cloud1 5s linear infinite;
+  animation-direction: normal;
+  animation-timing-function: cubic-bezier(.62,.27,.56,.92);
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+}
+
+.cloud3-img {
+  height: 5rem;
+  width: 5rem;
+  position: fixed;
+  right: 0;
+  bottom: 18rem;
+  animation: cloud1 4s linear infinite;
+  animation-direction: normal;
+  animation-timing-function: cubic-bezier(.62,.27,.56,.92);
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+}
+
+.cloud4-img {
+  height: 4rem;
+  width: 4rem;
+  position: fixed;
+  right: 0;
+  bottom: 21rem;
+  animation: cloud1 2s linear infinite;
+  animation-direction: normal;
+  animation-timing-function: cubic-bezier(.62,.27,.56,.92);
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+}
+
+.sun-img {
+  height: 5rem;
+  width: 5rem;
+  position: fixed;
+  right: -5rem;
+  bottom: 25rem;
+  animation: sun 8s linear infinite;
+  animation-direction: normal;
+  animation-timing-function: cubic-bezier(.45,.43,.7,.76);
+  animation-iteration-count: 1;
+  animation-play-state: running;
+}
+
+.background-sky {
+  background-image: linear-gradient(white, rgb(30, 165, 210));
+  width: 100vw;
+  height: 15rem;
+  position: fixed;
+  left: 0;
+  bottom: 10rem;
+}
+
+.about-animation {
+  position: relative;
+  z-index: 10;
+}
+
+.fly-font {
+  font-family: 'VT323', monospace;
+  font-size: 3rem;
+  position: fixed;
+  bottom: 7rem;
+  left: 43vw;
+  z-index: 30;
+  color: black;
+  animation: flyAgain 1s linear forwards;
+}
+
+.fly-again {
+  font-family: 'VT323', monospace;
+  font-size: 3rem;
+  position: fixed;
+  bottom: 7rem;
+  left: 43vw;
+  z-index: 30;
+  color: black;
+  animation: planeFont 1s linear forwards;
+}
+
+#plane:checked ~ .fly-font {
+  animation: planeFont 1s linear forwards;
+  animation-direction: normal;
+  animation-timing-function: cubic-bezier(.62,.27,.56,.92);
+  animation-iteration-count: 1;
+  animation-play-state: running;
+}
+
+#plane:checked ~ .fly-again {
+  animation: flyAgain 1s linear forwards;
+  animation-direction: normal;
+  animation-timing-function:  cubic-bezier(.62,.27,.56,.92);
+  animation-iteration-count: 1;
+  animation-play-state: running;
+}
+
+.fly-font:hover {
+  color: rgb(75, 75, 75);
+}
+
+#plane:checked ~ .airplane-img {
+  animation: flyoff 3s linear infinite;
+  animation-direction: normal;
+  animation-timing-function: cubic-bezier(.45,.43,.7,.76);
+  animation-iteration-count: 1;
+  animation-play-state: running;
+}
+
+#plane {
+  display: none;
+}
+
+@keyframes flyAgain {
+  from {
+    transform: translateY(0)
+  }
+  to {
+    transform: translateY(-5rem);
+  }
+}
+
+@keyframes planeFont {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(10rem);
+  }
+}
+
+@keyframes flyoff {
+  0% {
+    transform: translate3d(0,0,0);
+  }
+  20% {
+    transform: translate3d(20vw,-10vh,11rem)
+  }
+  40% {
+    transform: translate3d(40vw,-20vh,13rem)
+  }
+  60% {
+    transform: translate3d(60vw,-40vh,20rem)
+  }
+  80% {
+    transform: translate3d(90vw, -65vh,30rem)
+  }
+  85% {
+    transform: translate3d(110vw, 40vh, 40rem)
+  }
+  90% {
+    transform: translate3d(-110vw,40vh,0)
+  }
+}
+
+@keyframes sun {
+  0% {
+    transform: translate3d(0,0,0);
+  }
+  25% {
+    transform: translate3d(-25vw,-1.5rem,0);
+  }
+  50% {
+    transform: translate3d(-50vw,-2rem,0);
+  }
+  75% {
+    transform: translate3d(-75vw,-1.5rem,0);
+  }
+  100% {
+    transform: translate3d(-110vw,0,0);
+  }
+}
+
+@keyframes plane {
+  from {
+    transform: translate3d(0,0,0);
+  }
+  to {
+    transform: translate3d(0,3rem,0);
+  }
+}
+
+@keyframes cloud1 {
+  from {
+    transform: translate3d(0,0,0);
+  }
+  to {
+    transform: translate3d(-100vw,0,0);
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .airplane-img {
+    height: 5rem;
+    width: 5rem;
+    left: 3rem;
+  }
+
+  .cloud1-img {
+    height: 3rem;
+    width: 3rem;
+  }
+
+  .cloud3-img {
+    height: 4rem;
+    width: 4rem;
+  }
+
+  .cloud4-img {
+    height: 2.5rem;
+    width: 2.5rem;
+  }
 }
