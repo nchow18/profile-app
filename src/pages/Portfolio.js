@@ -59,8 +59,14 @@ function Portfolio() {
     <section>
       <div className="page-format">
         <div className="page-content portfolio-content">
-          <div className="portfolio-font">
-            PORTFOLIO
+        <input type="checkbox" id="portfolio-list" />
+          <div className="portfolio-menu">
+            <div className="portfolio-dropdown">
+              {categories.map((link) => (
+                <span>{link.name}</span>
+              ))}
+            </div>
+            <label htmlFor="portfolio-list"><i class="fas fa-cookie-bite portfolio-icon"></i></label>
           </div>
         </div>
       </div>

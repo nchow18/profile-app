@@ -5,23 +5,58 @@
   left: 10rem;
 }
 
-.home-page, .portfolio-page, .contact-page {
+.home-page, .contact-page {
   background-color: black;
-  animation: return 1s linear;
+  animation: returnLeft 1s linear;
   height: 100%;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  animation: returnLeft 1s forwards;
+  animation-direction: alternate;
+  animation-timing-function: cubic-bezier(.83,.32,.11,.9);
+  animation-iteration-count: 1;
+  animation-play-state: running;
+}
+
+.portfolio-page {
+  background-color: black;
+  height: 100%;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  animation: returnRight 1s forwards;
+  animation-direction: alternate;
+  animation-timing-function: cubic-bezier(.83,.32,.11,.9);
+  animation-iteration-count: 1;
+  animation-play-state: running;
 }
 
 .about-page, .resume-page {
   background-color: white;
-  animation: return 1s linear;
+  animation: returnLeft 1s linear;
   height: 100%;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  animation: returnLeft 1s forwards;
+  animation-direction: alternate;
+  animation-timing-function: cubic-bezier(.83,.32,.11,.9);
+  animation-iteration-count: 1;
+  animation-play-state: running;
 }
 
-@keyframes return {
+@keyframes returnLeft {
   from {
-    transform: translateX(100%)
+    transform: translate3d(100%,0,0)
   }
   to {
-    transform: translateX(0%)
+    transform: translate3d(0,0,0)
+  }
+}
+
+@keyframes returnRight {
+  from {
+    transform: translate3d(-100%,0,0)
+  }
+  to {
+    transform: translate3d(0,0,0)
   }
 }

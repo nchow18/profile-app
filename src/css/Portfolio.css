@@ -1,3 +1,40 @@
 .portfolio-content {
-  color: white
+  color: white;
+}
+
+.portfolio-icon {
+  color: white;
+  font-size: 5rem;
+  padding: 1rem;
+}
+
+.portfolio-dropdown {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  color: black;
+  width: 9rem;
+  padding: 1rem;
+}
+
+.portfolio-dropdown > span {
+  padding-top: .5rem;
+}
+
+.portfolio-menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: fixed;
+  left: -11rem;
+  transition: left .5s linear;
+}
+
+#portfolio-list {
+  display: none;
+}
+
+#portfolio-list:checked ~ .portfolio-menu {
+  left: 0rem;
+  transition: left .5s linear;
 }

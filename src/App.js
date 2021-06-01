@@ -21,32 +21,47 @@ function App() {
       href: '/home',
       label: 'home-page',
       class: 'checkbox',
-      key: 'home'
+      key: 'home',
+      emoji: 'fas fa-home',
+      emojiClass: 'home-emoji',
+      linkClass: 'home-link',
     },
     {
       name: 'About Me',
       href: '/about',
       label: 'about-page',
       class: 'checkbox',
-      key: 'about'
+      key: 'about',
+      emoji: 'fas fa-smile',
+      emojiClass: 'about-emoji',
+      linkClass: 'about-link',
     },
     {
       name: 'Portfolio',
       href: '/portfolio',
       label: 'portfolio-page',
-      key: 'portfolio'
+      key: 'portfolio',
+      emoji: 'fas fa-briefcase',
+      emojiClass: 'portfolio-emoji',
+      linkClass: 'portfolio-link',
     },
     {
       name: 'Resume',
       href: '/resume',
       label: 'resume-page',
-      key: 'resume'
+      key: 'resume',
+      emoji: 'fas fa-newspaper',
+      emojiClass: 'resume-emoji',
+      linkClass: 'resume-link',
     },
     {
       name: 'Contact',
       href: '/contact',
       label: 'contact-page',
-      key: 'contact'
+      key: 'contact',
+      emoji: 'fas fa-id-card',
+      emojiClass: 'contact-emoji',
+      linkClass: 'contact-link',
     }
 
   ])
@@ -119,11 +134,16 @@ function App() {
     setMenuState(currentMenu => currentMenu = true);
   }
 
+  function closeMenu() {
+    setMenuState(currentMenu => currentMenu = false);
+  }
+
 
   return (
     <div className="page">
     <Router>
       <nav>
+      <input type="checkbox" checked={currentMenu} id="header-menu" />
         <div className="header-container">
           <div className="header-content">
             <label htmlFor="home-page">
@@ -132,11 +152,14 @@ function App() {
             <label onClick={() => {setMenu()}} htmlFor="header-menu"><i className="fas fa-hamburger menu-icon"></i></label>
           </div>
         </div>
-        <input type="checkbox" checked={currentMenu} id="header-menu" />
+
         <div className="dropdown-container">
           <div className="dropdown">
+            <label onClick={() => {closeMenu()}} htmlFor="header-menu"><i class="fas fa-times menu-icon"></i></label>
               {links.map((link) => (
-                <label htmlFor={link.label} className='header-link'>{link.name}</label>
+                <>
+                <label htmlFor={link.label} className={`header-link ${link.linkClass}`}>{link.name}</label>
+                </>
               ))}
           </div>
         </div>
@@ -150,27 +173,27 @@ function App() {
           <input type="checkbox" key="contact" checked={currentContactCheck} onChange={() => {setPage('contact')}} id="contact-page" className="checkbox"/>
           {Auth.getPageType() === 'home' && (
             <div className="home-page">
-            <Route exact path="/home" component={Home} />
+            <Home />
             </div>
           )}
           {Auth.getPageType() === 'about' && (
             <div className="about-page">
-            <Route exact path="/about" component={About} />
+            <About />
             </div>
           )}
           {Auth.getPageType() === 'portfolio' && (
             <div className="portfolio-page">
-            <Route exact path="/portfolio" component={Portfolio} />
+            <Portfolio />
             </div>          
           )}
           {Auth.getPageType() === 'resume' && (
             <div className="resume-page">
-            <Route exact path="/resume" component={Resume} />
+            <Resume />
             </div>     
           )}
           {Auth.getPageType() === 'contact' && (
             <div className="contact-page">
-            <Route exact path="/contact" component={Contact} />
+            <Contact />
             </div>          
           )}
         </div>
