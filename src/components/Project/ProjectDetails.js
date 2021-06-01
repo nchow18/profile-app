@@ -1,24 +1,34 @@
 import React from 'react';
-import Auth from '../../utils/Auth';
 
 function ProjectDetails(props) {
 
   const {
-    details=[]
+    currentProject,
   } = props
 
-  const projectId = Auth.getProject()
-
-  const project = details.filter((project) => project.label === projectId);
-  console.log(project);
+  const details = currentProject;
 
   return (
     <>
       <div className="project-contents">
-        <div className="view-project-font">
-          PROJECTS
+
+          <div className="view-project-font">
+            <div className="icons-row">
+              <span>PROJECTS</span>
+              <label for="project-info"><i class="fas fa-info-circle project-info-button"></i></label>
+            </div>
         </div>
-        <img alt="proj-img" src={project.img} className="project-picture" />
+        <input type="checkbox" id="project-info" />
+        <div className="project-row">
+          <img alt="proj-img" src={details.img} className="project-picture" />
+        </div>
+        <div className="project-details">
+            <p>{details.name}</p>
+            <div className="icons-row">
+              <a href={details.github}><i className="fab fa-github project-link-icon"></i></a>
+              <a href={details.link}><i className="far fa-window-maximize project-link-icon"></i></a>
+            </div>
+          </div>
       </div>
     </>
   )
