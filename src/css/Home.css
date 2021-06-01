@@ -7,3 +7,9 @@
 .home-content {
   color: white;
 }
+
+@media screen and (max-width: 1250px) {
+  .home-font {
+    font-size: 2rem;
+  }
+}

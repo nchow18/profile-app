@@ -16,6 +16,8 @@
   animation-timing-function: cubic-bezier(.83,.32,.11,.9);
   animation-iteration-count: 1;
   animation-play-state: running;
+  position: fixed;
+  width: 100%;
 }
 
 .portfolio-page {
@@ -28,6 +30,8 @@
   animation-timing-function: cubic-bezier(.83,.32,.11,.9);
   animation-iteration-count: 1;
   animation-play-state: running;
+  position: fixed;
+  width: 100%;
 }
 
 .about-page, .resume-page {
@@ -41,6 +45,8 @@
   animation-timing-function: cubic-bezier(.83,.32,.11,.9);
   animation-iteration-count: 1;
   animation-play-state: running;
+  position: fixed;
+  width: 100%;
 }
 
 @keyframes returnLeft {

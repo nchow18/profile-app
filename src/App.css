@@ -44,6 +44,13 @@ section {
   display: flex;
   flex-direction: column;
   height: 100%;
+  padding: 1rem;
+}
+
+@media screen and (max-width: 1250px) {
+  .page-content {
+    width: 100%;
+  }
 }
 
 .App-logo {
