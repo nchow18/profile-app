@@ -108,3 +108,10 @@
     font-size: 2rem;
   }
 }
+
+@media screen and (max-height: 820px) {
+  .header-link {
+    font-size: 3rem;
+    padding: 1rem;
+  }
+}
