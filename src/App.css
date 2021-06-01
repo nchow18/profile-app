@@ -2,8 +2,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
 
 h1, a, span, li , div {
-  font-family: Arial, Geneva, Helvetica, sans-serif;
+  /* font-family: Arial, Geneva, Helvetica, sans-serif; */
+  font-family: 'Poppins', sans-serif;
   text-decoration: none;
+}
+
+:root {
+  --cubic: cubic-bezier(.62,.27,.56,.92);
 }
 
 .App {

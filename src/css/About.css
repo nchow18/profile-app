@@ -2,11 +2,88 @@
   color: black;
 }
 
+.about-font {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
 .about-profile-img {
   height: 15rem;
   width: 15rem;
   object-fit: cover;
+  animation: profileImg 1s forwards;
+  animation-direction: normal;
+  animation-timing-function: var(--cubic);
+  animation-iteration-count: 1;
+  animation-play-state: paused;
+  position: relative;
 }
+
+.about-flex {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+}
+
+.about-details {
+  padding-left: 1rem;
+  animation: aboutDetails 1.3s forwards;
+  animation-timing-function: var(--cubic);
+  animation-direction: normal;
+  animation-iteration-count: 1;
+  animation-play-state: paused;
+}
+
+#learn-more {
+  display: none;
+}
+
+.about-picture-container {
+  position: relative;
+  left: 35vw;
+  animation: rightLeft 2s forwards;
+}
+
+.learn-more-font {
+  font-size: 3rem;
+  color: black;
+  position: absolute;
+  top: 1rem;
+  z-index: 8;
+  left: 25vw;
+}
+
+.learn-more-font:hover {
+  color: rgb(75, 75, 75);
+}
+
+#learn-more:checked ~ .about-details {
+  animation-play-state: running;
+}
+
+#learn-more:checked ~ .about-picture-container {
+  animation: pictureLeft 1s forwards;
+}
+
+@keyframes pictureLeft {
+  from {
+    transform: translateX(0)
+  }
+  to {
+    transform: translateX(-35vw);
+  }
+}
+
+@keyframes aboutDetails {
+  from {
+    transform: translateX(110vw)
+  }
+  to {
+    transform: translateX(0vw);
+  }
+}
+
 
 .airplane-img {
   height: 10rem;
@@ -92,7 +169,7 @@
   height: 15rem;
   position: fixed;
   left: 0;
-  bottom: 10rem;
+  bottom: 8rem;
 }
 
 .about-animation {
@@ -105,7 +182,7 @@
   font-size: 3rem;
   position: fixed;
   bottom: 7rem;
-  left: 43vw;
+  width: 20rem;
   z-index: 30;
   color: black;
   animation: flyAgain 1s linear forwards;
@@ -116,7 +193,6 @@
   font-size: 3rem;
   position: fixed;
   bottom: 7rem;
-  left: 43vw;
   z-index: 30;
   color: black;
   animation: planeFont 1s linear forwards;
@@ -152,6 +228,40 @@
 
 #plane {
   display: none;
+}
+
+.about-me {
+  animation: topBottom 1.5s linear infinite;
+  animation-direction: normal;
+  animation-timing-function:  cubic-bezier(.62,.27,.56,.92);
+  animation-iteration-count: 1;
+  animation-play-state: running;
+}
+
+.about-font {
+  animation: rightLeft 1.8s linear infinite;
+  animation-direction: normal;
+  animation-timing-function: var(--cubic);
+  animation-iteration-count: 1;
+  animation-play-state: running;
+}
+
+@keyframes rightLeft {
+  from {
+    transform: translateX(110vw)
+  }
+  to {
+    transform: translateX(0vw)
+  }
+}
+
+@keyframes topBottom {
+  from {
+    transform: translateY(-110vh)
+  }
+  to {
+    transform: translateY(0vw);
+  }
 }
 
 @keyframes flyAgain {
@@ -252,5 +362,23 @@
   .cloud4-img {
     height: 2.5rem;
     width: 2.5rem;
+  }
+
+  .about-profile-img {
+    height: 10rem;
+    width: 10rem;
+  }
+
+  .about-font {
+    font-size: 1.5rem;
+  }
+
+  .about-flex {
+    flex-direction: column;
+  }
+
+  .about-details {
+    font-size: .7rem;
+    padding-left: 0rem;
   }
 }
