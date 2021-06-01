@@ -26,8 +26,10 @@
   flex-direction: row;
   align-items: center;
   position: fixed;
-  left: -11rem;
-  transition: left .5s linear;
+  left: 0rem;
+  animation: cookieReturn .6s forwards;
+  animation-timing-function: var(--cubic);
+  animation-play-state: running;
 }
 
 #portfolio-list {
@@ -35,6 +37,27 @@
 }
 
 #portfolio-list:checked ~ .portfolio-menu {
-  left: 0rem;
-  transition: left .5s linear;
+  animation: cookie .6s forwards;
+  animation-timing-function: var(--cubic);
+  animation-direction: normal;
+  animation-iteration-count: 1;
+  animation-play-state: running;
+}
+
+@keyframes cookie {
+  from {
+    transform: translateX(-10rem)
+  }
+  to {
+    transform: translateX(0rem)
+  }
+}
+
+@keyframes cookieReturn {
+  from {
+    transform: translateX(0rem)
+  }
+  to {
+    transform: translateX(-11rem)
+  }
 }
