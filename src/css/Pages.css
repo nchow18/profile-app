@@ -12,28 +12,16 @@
 }
 
 .about-page, .resume-page {
-  animation: return 1s lienar;
+  background-color: white;
+  animation: return 1s linear;
   height: 100%;
-}
-
-#home-page:checked ~ .home-page {
-  
 }
 
 @keyframes return {
   from {
-    transform: translateX(-100%)
+    transform: translateX(100%)
   }
   to {
     transform: translateX(0%)
-  }
-}
-
-@keyframes home {
-  from {
-    transform: translateX(-100%)
-  }
-  to {
-    transform: translateX(0%);
   }
 }

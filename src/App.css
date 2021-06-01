@@ -6,7 +6,6 @@ h1, a, span, li , div {
   text-decoration: none;
 }
 
-
 .App {
   text-align: center;
 }
@@ -25,6 +24,7 @@ h1, a, span, li , div {
   left: 0;
   width: 100%;
   height: 100%;
+  background-color: black;
 }
 
 section {
@@ -35,7 +35,6 @@ section {
 .page-format {
   display: flex;
   flex-wrap: wrap;
-  padding: 1rem;
   justify-content: center;
   height: 100%;
 }
