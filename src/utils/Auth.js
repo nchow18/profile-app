@@ -6,8 +6,8 @@ class AuthService {
   }
 
   getCurrentPage() {
-    const page = localStorage.getItem('current_page');
-    return window.location.href = `/${page}`;
+    // const page = localStorage.getItem('current_page');
+    // return window.location.href = `/${page}`;
   }
 
   getPageType() {
