@@ -2,6 +2,10 @@
   color: white;
 }
 
+.input-display {
+  display: none;
+}
+
 .portfolio-icon {
   color: white;
   font-size: 5rem;
@@ -92,7 +96,10 @@
 .project-details {
   display: flex;
   flex-direction: column;
-  padding-left: 1rem;
+  position: fixed;
+  bottom: -15rem;
+  width: 80%;
+  animation: detailsRight 1s forwards
 }
 
 .project-picture {
@@ -106,6 +113,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  animation: projectRight 2s forwards;
 }
 
 .icons-row {
@@ -129,6 +137,53 @@
   animation-direction: normal;
 }
 
+#project-info:checked ~ .project-row {
+  animation: toLeft 1s forwards;
+  animation-timing-function: var(--cubic);
+  animation-direction: normal;
+  animation-iteration-count: 1;
+}
+
+#project-info:checked ~ .project-details {
+  animation: detailsLeft 1.5s forwards;
+}
+
+@keyframes projectRight {
+  from {
+    transform: translateX(-50vw)
+  }
+  to {
+    transform: translateX(0w);
+  }
+}
+
+@keyframes detailsRight {
+  from {
+    transform: translateY(-65vh)
+  }
+  to {
+    transform: translateY(0)
+  }
+}
+
+@keyframes detailsLeft {
+  from {
+    transform: translateY(0)
+  }
+  to {
+    transform: translateY(-65vh)
+  }
+}
+
+@keyframes toLeft {
+  from {
+    transform: translateX(0)
+  }
+  to {
+    transform: translateX(-100vw)
+  }
+}
+
 @keyframes infoButton {
   from {
     transform: translateX(200vw)
@@ -138,7 +193,11 @@
   }
 }
 
-
+@media screen and (max-width: 900px) {
+  .project-details {
+    font-size: .9rem;
+  }
+}
 
 @media screen and (max-width: 560px) {
   .project-picture {
@@ -149,8 +208,9 @@
   .portfolio-dropdown {
     font-size: .8rem;
   }
+
+  .project-details {
+    font-size: .7rem;
+  }
 }
 
-@media screen and (max-width: 400px) {
-
-}

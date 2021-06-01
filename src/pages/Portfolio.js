@@ -70,7 +70,7 @@ function Portfolio() {
     <section>
       <div className="page-format">
         {categories.map((link) => (
-          <input key={link.name} type="checkbox" id={link.label} />
+          <div className="input-display"><input key={link.name} type="checkbox" id={link.label} /></div>
         ))}
         <div className="page-content portfolio-content">
         <input type="checkbox" id="portfolio-list" />

@@ -28,6 +28,7 @@ function ProjectDetails(props) {
               <a href={details.github}><i className="fab fa-github project-link-icon"></i></a>
               <a href={details.link}><i className="far fa-window-maximize project-link-icon"></i></a>
             </div>
+            <p>{details.details}</p>
           </div>
       </div>
     </>
