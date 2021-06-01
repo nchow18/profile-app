@@ -1,5 +1,5 @@
 .checkbox {
-  display: initial;
+  display: none;
   position: relative;
   z-index: 200;
   left: 10rem;
