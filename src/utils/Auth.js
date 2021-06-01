@@ -14,6 +14,14 @@ class AuthService {
     return localStorage.getItem('current_page');
   }
 
+  setProject(project) {
+    return localStorage.setItem('current_project', project)
+  }
+
+  getProject() {
+    return localStorage.getItem('current_project');
+  }
+
 }
 
 export default new AuthService();
