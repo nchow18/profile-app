@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import '../css/Portfolio.css';
 import Photo0 from '../assets/img/0.png';
 import Photo1 from '../assets/img/1.png';
 import Photo2 from '../assets/img/2.png';
@@ -55,8 +56,14 @@ function Portfolio() {
   ])
 
   return (
-    <section id="portfolio">
-      PORTFOLIO
+    <section>
+      <div className="page-format">
+        <div className="page-content portfolio-content">
+          <div className="portfolio-font">
+            PORTFOLIO
+          </div>
+        </div>
+      </div>
     </section>
   );
 }

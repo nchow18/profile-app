@@ -61,52 +61,57 @@ function App() {
   function setPage(page) {
     if(page === 'home') {
       Auth.redirectPage(page);
-      setHomeCheck(currentHomeCheck => currentHomeCheck = true)
-      setAboutCheck(currentAboutCheck => currentAboutCheck = false);
-      setResumeCheck(currentResumeCheck => currentResumeCheck = false);
-      setPortfolioCheck(currentPortfolioCheck => currentPortfolioCheck = false);
-      setContactCheck(currentContactCheck => currentContactCheck = false);
-      setMenuState(currentMenu => currentMenu = false);
+      // setHomeCheck(currentHomeCheck => currentHomeCheck = true)
+      // setAboutCheck(currentAboutCheck => currentAboutCheck = false);
+      // setResumeCheck(currentResumeCheck => currentResumeCheck = false);
+      // setPortfolioCheck(currentPortfolioCheck => currentPortfolioCheck = false);
+      // setContactCheck(currentContactCheck => currentContactCheck = false);
+      // setMenuState(currentMenu => currentMenu = false);
+      Auth.getCurrentPage();
     }
 
     if(page === 'about') {
       Auth.redirectPage(page);
-      setHomeCheck(currentHomeCheck => currentHomeCheck = false)
-      setAboutCheck(currentAboutCheck => currentAboutCheck = true);
-      setResumeCheck(currentResumeCheck => currentResumeCheck = false);
-      setPortfolioCheck(currentPortfolioCheck => currentPortfolioCheck = false);
-      setContactCheck(currentContactCheck => currentContactCheck = false);
-      setMenuState(currentMenu => currentMenu = false);
+      // setHomeCheck(currentHomeCheck => currentHomeCheck = false)
+      // setAboutCheck(currentAboutCheck => currentAboutCheck = true);
+      // setResumeCheck(currentResumeCheck => currentResumeCheck = false);
+      // setPortfolioCheck(currentPortfolioCheck => currentPortfolioCheck = false);
+      // setContactCheck(currentContactCheck => currentContactCheck = false);
+      // setMenuState(currentMenu => currentMenu = false);
+      Auth.getCurrentPage();
     }
 
     if(page === 'resume') {
       Auth.redirectPage(page);
-      setHomeCheck(currentHomeCheck => currentHomeCheck = false)
-      setAboutCheck(currentAboutCheck => currentAboutCheck = false);
-      setResumeCheck(currentResumeCheck => currentResumeCheck = true);
-      setPortfolioCheck(currentPortfolioCheck => currentPortfolioCheck = false);
-      setContactCheck(currentContactCheck => currentContactCheck = false);
-      setMenuState(currentMenu => currentMenu = false);
+      // setHomeCheck(currentHomeCheck => currentHomeCheck = false)
+      // setAboutCheck(currentAboutCheck => currentAboutCheck = false);
+      // setResumeCheck(currentResumeCheck => currentResumeCheck = true);
+      // setPortfolioCheck(currentPortfolioCheck => currentPortfolioCheck = false);
+      // setContactCheck(currentContactCheck => currentContactCheck = false);
+      // setMenuState(currentMenu => currentMenu = false);
+      Auth.getCurrentPage();
     }
 
     if(page === 'portfolio') {
       Auth.redirectPage(page);
-      setHomeCheck(currentHomeCheck => currentHomeCheck = false)
-      setAboutCheck(currentAboutCheck => currentAboutCheck = false);
-      setResumeCheck(currentResumeCheck => currentResumeCheck = false);
-      setPortfolioCheck(currentPortfolioCheck => currentPortfolioCheck = true);
-      setContactCheck(currentContactCheck => currentContactCheck = false);
-      setMenuState(currentMenu => currentMenu = false);
+      // setHomeCheck(currentHomeCheck => currentHomeCheck = false)
+      // setAboutCheck(currentAboutCheck => currentAboutCheck = false);
+      // setResumeCheck(currentResumeCheck => currentResumeCheck = false);
+      // setPortfolioCheck(currentPortfolioCheck => currentPortfolioCheck = true);
+      // setContactCheck(currentContactCheck => currentContactCheck = false);
+      // setMenuState(currentMenu => currentMenu = false);
+      Auth.getCurrentPage();
     }
 
     if(page === 'contact') {
       Auth.redirectPage(page);
-      setHomeCheck(currentHomeCheck => currentHomeCheck = false)
-      setAboutCheck(currentAboutCheck => currentAboutCheck = false);
-      setResumeCheck(currentResumeCheck => currentResumeCheck = false);
-      setPortfolioCheck(currentPortfolioCheck => currentPortfolioCheck = false);
-      setContactCheck(currentContactCheck => currentContactCheck = true);
-      setMenuState(currentMenu => currentMenu = false);
+      // setHomeCheck(currentHomeCheck => currentHomeCheck = false)
+      // setAboutCheck(currentAboutCheck => currentAboutCheck = false);
+      // setResumeCheck(currentResumeCheck => currentResumeCheck = false);
+      // setPortfolioCheck(currentPortfolioCheck => currentPortfolioCheck = false);
+      // setContactCheck(currentContactCheck => currentContactCheck = true);
+      // setMenuState(currentMenu => currentMenu = false);
+      Auth.getCurrentPage();
     }
   }
 
@@ -143,21 +148,31 @@ function App() {
           <input type="checkbox" key="portfolio" checked={currentPortfolioCheck} onChange={() => {setPage('portfolio')}} id="portfolio-page" className="checkbox"/>
           <input type="checkbox" key="resume" checked={currentResumeCheck} onChange={() => {setPage('resume')}} id="resume-page" className="checkbox"/>
           <input type="checkbox" key="contact" checked={currentContactCheck} onChange={() => {setPage('contact')}} id="contact-page" className="checkbox"/>
-          <div className="home-page">
-            <Home />
-          </div>
-          <div className="about-page">
-            <About />
-          </div>
-          <div className="portfolio-page">
-            <Portfolio />
-          </div>
-          <div className="resume-page">
-            <Resume />
-          </div>
-          <div className="contact-page">
-            <Contact />
-          </div>
+          {Auth.getPageType() === 'home' && (
+            <div className="home-page">
+            <Route exact path="/home" component={Home} />
+            </div>
+          )}
+          {Auth.getPageType() === 'about' && (
+            <div className="about-page">
+            <Route exact path="/about" component={About} />
+            </div>
+          )}
+          {Auth.getPageType() === 'portfolio' && (
+            <div className="portfolio-page">
+            <Route exact path="/portfolio" component={Portfolio} />
+            </div>          
+          )}
+          {Auth.getPageType() === 'resume' && (
+            <div className="resume-page">
+            <Route exact path="/resume" component={Resume} />
+            </div>     
+          )}
+          {Auth.getPageType() === 'contact' && (
+            <div className="contact-page">
+            <Route exact path="/contact" component={Contact} />
+            </div>          
+          )}
         </div>
       </Switch>
     </Router>

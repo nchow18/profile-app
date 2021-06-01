@@ -1,49 +1,39 @@
 .checkbox {
-  display: none;
+  display: initial;
+  position: relative;
+  z-index: 200;
+  left: 10rem;
 }
 
 .home-page, .portfolio-page, .contact-page {
-  background-color: pink;
+  background-color: black;
+  animation: return 1s linear;
   height: 100%;
-  position: fixed;
-  width: 100%;
-  right: -100%;
-  top: 4rem;
-  transition: all .5s ease-in-out;
 }
 
-
 .about-page, .resume-page {
-  background-color: gray;
+  animation: return 1s lienar;
   height: 100%;
-  position: fixed;
-  width: 100%;
-  left: -100%;
-  top: 4rem;
-  transition: all .5s ease-in-out;
 }
 
 #home-page:checked ~ .home-page {
-  right: 0;
-  transition: all .5s ease-in-out;
+  
 }
 
-#about-page:checked ~ .about-page {
-  left: 0;
-  transition: all .5s ease-in-out;
+@keyframes return {
+  from {
+    transform: translateX(-100%)
+  }
+  to {
+    transform: translateX(0%)
+  }
 }
 
-#portfolio-page:checked ~ .portfolio-page {
-  right: 0;
-  transition: all .5s ease-in-out;
-}
-
-#resume-page:checked ~ .resume-page {
-  left: 0;
-  transition: all .5s ease-in-out;
-}
-
-#contact-page:checked ~ .contact-page {
-  right: 0;
-  transition: all .5s ease-in-out;
+@keyframes home {
+  from {
+    transform: translateX(-100%)
+  }
+  to {
+    transform: translateX(0%);
+  }
 }

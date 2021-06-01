@@ -3,6 +3,7 @@
   position: fixed;
   width: 100%;
   background-color: black;
+  color: white;
 }
 
 .header-content {
@@ -17,10 +18,23 @@
   font-size: 2rem;
 }
 
+.menu-icon:hover {
+  animation: burger 5s linear infinite;
+}
+
+@keyframes burger {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
 .dropdown {
   display: flex;
   flex-direction: column;
-  background-color: rgb(129, 129, 255, 0.2);
+  background-color: rgb(129, 129, 255, 0.9);
   padding: 1rem;
   height: 100%;
   width: 100%;
@@ -40,7 +54,11 @@
 
 .header-link {
   padding: .5rem 0rem;
-  color: black;
+  color: white;
+  margin: .2rem;
+  width: 100%;
+  padding: 0 1rem;
+  font-weight: bold;
 }
 
 #header-menu:checked ~ .dropdown-container {

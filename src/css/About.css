@@ -1,0 +1,9 @@
+.about-content {
+  color: black;
+}
+
+.about-profile-img {
+  height: 20rem;
+  width: 20rem;
+  object-fit: cover;
+}

@@ -1,4 +1,12 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+
+h1, a, span, li , div {
+  font-family: Arial, Geneva, Helvetica, sans-serif;
+  text-decoration: none;
+}
+
+
 .App {
   text-align: center;
 }
@@ -9,17 +17,34 @@
   position: absolute;
   top: 0;
   left: 0;
-  background-color: rgb(28, 28, 28);
 }
 
 .content {
   position: relative;
   top: 4rem;
   left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 section {
+  width: 100%;
+  height: 100%;
+}
+
+.page-format {
+  display: flex;
+  flex-wrap: wrap;
   padding: 1rem;
+  justify-content: center;
+  height: 100%;
+}
+
+.page-content {
+  width: 1250px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .App-logo {
