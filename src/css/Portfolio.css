@@ -212,5 +212,13 @@
   .project-details {
     font-size: .7rem;
   }
+
+  .portfolio-container {
+    height: 30vh;
+  }
+
+  .icons-row {
+    font-size: 2rem;
+  }
 }
 
