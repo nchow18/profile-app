@@ -6,12 +6,13 @@ import About from './pages/About';
 import Portfolio from './pages/Portfolio';
 import Contact from './pages/Contact';
 import Resume from './pages/Resume';
-import Nav from './components/Nav';
+import Header from './components/Nav/Header';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import Dropdown from './components/Nav/Dropdown';
 import Auth from './utils/Auth';
 import './css/Pages.css';
+import { HeaderLinks } from './utils/helpers';
 
 function App() {
 
@@ -63,143 +64,28 @@ function App() {
       emojiClass: 'contact-emoji',
       linkClass: 'contact-link',
     }
-
   ])
 
-  const [currentHomeCheck, setHomeCheck] = useState(false);
-  const [currentAboutCheck, setAboutCheck] = useState(false);
-  const [currentResumeCheck, setResumeCheck] = useState(false);
-  const [currentPortfolioCheck, setPortfolioCheck] = useState(false);
-  const [currentContactCheck, setContactCheck] = useState(false);
-  const [currentMenu, setMenuState] = useState(false);
-
-  function setPage(page) {
-    if(page === 'home') {
-      Auth.redirectPage(page);
-      // setHomeCheck(currentHomeCheck => currentHomeCheck = true)
-      // setAboutCheck(currentAboutCheck => currentAboutCheck = false);
-      // setResumeCheck(currentResumeCheck => currentResumeCheck = false);
-      // setPortfolioCheck(currentPortfolioCheck => currentPortfolioCheck = false);
-      // setContactCheck(currentContactCheck => currentContactCheck = false);
-      // setMenuState(currentMenu => currentMenu = false);
-      Auth.getCurrentPage();
-    }
-
-    if(page === 'about') {
-      Auth.redirectPage(page);
-      // setHomeCheck(currentHomeCheck => currentHomeCheck = false)
-      // setAboutCheck(currentAboutCheck => currentAboutCheck = true);
-      // setResumeCheck(currentResumeCheck => currentResumeCheck = false);
-      // setPortfolioCheck(currentPortfolioCheck => currentPortfolioCheck = false);
-      // setContactCheck(currentContactCheck => currentContactCheck = false);
-      // setMenuState(currentMenu => currentMenu = false);
-      Auth.getCurrentPage();
-    }
-
-    if(page === 'resume') {
-      Auth.redirectPage(page);
-      // setHomeCheck(currentHomeCheck => currentHomeCheck = false)
-      // setAboutCheck(currentAboutCheck => currentAboutCheck = false);
-      // setResumeCheck(currentResumeCheck => currentResumeCheck = true);
-      // setPortfolioCheck(currentPortfolioCheck => currentPortfolioCheck = false);
-      // setContactCheck(currentContactCheck => currentContactCheck = false);
-      // setMenuState(currentMenu => currentMenu = false);
-      Auth.getCurrentPage();
-    }
-
-    if(page === 'portfolio') {
-      Auth.redirectPage(page);
-      // setHomeCheck(currentHomeCheck => currentHomeCheck = false)
-      // setAboutCheck(currentAboutCheck => currentAboutCheck = false);
-      // setResumeCheck(currentResumeCheck => currentResumeCheck = false);
-      // setPortfolioCheck(currentPortfolioCheck => currentPortfolioCheck = true);
-      // setContactCheck(currentContactCheck => currentContactCheck = false);
-      // setMenuState(currentMenu => currentMenu = false);
-      Auth.getCurrentPage();
-    }
-
-    if(page === 'contact') {
-      Auth.redirectPage(page);
-      // setHomeCheck(currentHomeCheck => currentHomeCheck = false)
-      // setAboutCheck(currentAboutCheck => currentAboutCheck = false);
-      // setResumeCheck(currentResumeCheck => currentResumeCheck = false);
-      // setPortfolioCheck(currentPortfolioCheck => currentPortfolioCheck = false);
-      // setContactCheck(currentContactCheck => currentContactCheck = true);
-      // setMenuState(currentMenu => currentMenu = false);
-      Auth.getCurrentPage();
-    }
-  }
-
-  function setMenu() {
-    setMenuState(currentMenu => currentMenu = true);
-  }
-
-  function closeMenu() {
-    setMenuState(currentMenu => currentMenu = false);
-  }
-
-
+  const [link, setLink] = useState(links[0])
+ 
   return (
-    <div className="page">
     <Router>
-      <nav>
-      <input type="checkbox" checked={currentMenu} id="header-menu" />
-        <div className="header-container">
-          <div className="header-content">
-            <label htmlFor="home-page">
-              Nathan
-            </label>
-            <label onClick={() => {setMenu()}} htmlFor="header-menu"><i className="fas fa-hamburger menu-icon"></i></label>
-          </div>
-        </div>
-
-        <div className="dropdown-container">
-          <div className="dropdown">
-            <label onClick={() => {closeMenu()}} htmlFor="header-menu"><i class="fas fa-times menu-icon"></i></label>
-              {links.map((link) => (
-                <>
-                <label htmlFor={link.label} className={`header-link ${link.linkClass}`}>{link.name}</label>
-                </>
-              ))}
-          </div>
-        </div>
-      </nav>
+      <div className="page">
+      <Header
+        link={link}
+        setLink={setLink}
+        links={links} />
       <Switch >
         <div className="content">
-          <input type="checkbox" key="home" checked={currentHomeCheck} onChange={() => {setPage('home')}} id="home-page" className="checkbox"/>
-          <input type="checkbox" key="about" checked={currentAboutCheck} onChange={() => {setPage('about')}} id="about-page" className="checkbox"/>
-          <input type="checkbox" key="portfolio" checked={currentPortfolioCheck} onChange={() => {setPage('portfolio')}} id="portfolio-page" className="checkbox"/>
-          <input type="checkbox" key="resume" checked={currentResumeCheck} onChange={() => {setPage('resume')}} id="resume-page" className="checkbox"/>
-          <input type="checkbox" key="contact" checked={currentContactCheck} onChange={() => {setPage('contact')}} id="contact-page" className="checkbox"/>
-          {Auth.getPageType() === 'home' && (
-            <div className="home-page">
-            <Home />
-            </div>
-          )}
-          {Auth.getPageType() === 'about' && (
-            <div className="about-page">
-            <About />
-            </div>
-          )}
-          {Auth.getPageType() === 'portfolio' && (
-            <div className="portfolio-page">
-            <Portfolio />
-            </div>          
-          )}
-          {Auth.getPageType() === 'resume' && (
-            <div className="resume-page">
-            <Resume />
-            </div>     
-          )}
-          {Auth.getPageType() === 'contact' && (
-            <div className="contact-page">
-            <Contact />
-            </div>          
-          )}
+          <Route path="/" component={Home}/>
+          <Route path="/about" component={About}/>
+          <Route path="/portfolio" component={Portfolio}/>
+          <Route path="/resume" component={Resume}/>
+          <Route path="/contact" component={Contact}/>
         </div>
       </Switch>
+      </div>
     </Router>
-    </div>
   );
 }
 

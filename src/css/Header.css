@@ -1,117 +1,58 @@
 .header-container {
-  z-index: 999;
   position: fixed;
+  z-index: 10;
+  top: 0;
+  max-width: 1200px;
   width: 100%;
+  height: 4rem;
+  color: white;
   background-color: black;
-  color: white;
 }
 
-.header-content {
+.header-container div:nth-child(1) {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  z-index: 11;
 }
 
-.menu-icon {
+.header-container div:nth-child(1) * {
+  margin: 1rem;
+}
+
+.link-style {
   color: white;
+  text-decoration: none;
+  background-color: black;
+  font-size: 1.5rem;
+  line-height: 5rem;
+}
+
+i {
   font-size: 2rem;
 }
 
-.menu-icon:hover {
-  animation: burger 5s linear infinite;
-}
-
-@keyframes burger {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(359deg);
-  }
-}
-
-.dropdown {
-  display: flex;
-  flex-direction: column;
-  background-color: rgb(129, 129, 255, .98);
-  padding: 0rem;
-  height: 100%;
-  align-items: center;
-  justify-content: center;
-  align-content: center;
-  text-align: center;
-}
-
-#header-menu {
-  display: none;
-  background-color: blue;
-  position: fixed;
-  z-index: 15;
-  left: 0;
-  top: 10rem;
-}
-
-.dropdown-container {
-  position: fixed;
-  top: -100%;
-  z-index: 400;
-  width: 100%;
-  transition: all .7s ease-in-out;
-  height: 100%;
-  animation: bounce 1s forwards;
-  animation-direction: alternate;
-  animation-timing-function: cubic-bezier(.83,.32,.11,.9);
-  animation-iteration-count: 1;
-  animation-play-state: paused;
-}
-
-.emoji-icon {
-  display: initial;
-  color: white;
-  font-size: 5rem;
-  position: absolute;
-  right: 30%;
-  top: -2rem;
-}
-
 .header-link {
-  padding: .5rem 0rem;
   color: white;
-  margin: .2rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
   width: 100%;
-  padding: 1.5rem;
-  font-weight: bold;
-  font-size: 4rem;
+  background-color: black;
+  animation: dropDown 1s forwards;
+  animation-timing-function: var(--cubic);
 }
 
-.header-link:hover {
-  background-color: rgb(0,0,0,0.3);
-  width: 25rem;
-}
-
-#header-menu:checked ~ .dropdown-container {
-  animation-play-state: running;
-}
-
-@keyframes bounce {
+@keyframes dropDown {
   from {
-    transform: translate3d(0,0,0);
+    transform: translateY(-100vh);
   }
   to {
-    transform: translate3d(0,100%,0);
-  }
-}
-
-@media screen and (max-width: 800px) {
-  .header-link {
-    font-size: 2rem;
-  }
-}
-
-@media screen and (max-height: 820px) {
-  .header-link {
-    font-size: 3rem;
-    padding: 1rem;
+    transform: translateY(0vh);
   }
 }
