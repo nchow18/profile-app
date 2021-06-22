@@ -22,7 +22,7 @@ h1, a, span, li , div {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  position: fixed;
+  position: relative;
   align-items: center;
   left: 0;
   top: 0;

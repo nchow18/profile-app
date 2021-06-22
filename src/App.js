@@ -19,7 +19,7 @@ function App() {
   const [links] = useState([
     {
       name: 'Home',
-      href: '/home',
+      href: '/',
       label: 'home-page',
       class: 'checkbox',
       key: 'home',
@@ -77,11 +77,11 @@ function App() {
         links={links} />
       <Switch >
         <div className="content">
-          <Route path="/" component={Home}/>
-          <Route path="/about" component={About}/>
-          <Route path="/portfolio" component={Portfolio}/>
-          <Route path="/resume" component={Resume}/>
-          <Route path="/contact" component={Contact}/>
+          <Route exact path="/" component={Home}/>
+          <Route exact path="/about" component={About}/>
+          <Route exact path="/portfolio" component={Portfolio}/>
+          <Route exact path="/resume" component={Resume}/>
+          <Route exact path="/contact" component={Contact}/>
         </div>
       </Switch>
       </div>

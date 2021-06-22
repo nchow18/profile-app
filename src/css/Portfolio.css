@@ -1,0 +1,44 @@
+.project-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  max-width: 1200px;
+  width: 100%;
+  background-color: white;
+}
+
+.project-section {
+  height: 20rem;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  padding: 1rem;
+}
+
+.project-container .project-section:nth-child(2n) {
+  background-color: rgb(65, 65, 65);
+  color: white;
+}
+
+.project-container .project-section:nth-child(1n) img {
+  grid-column: 1 / span 1;
+  margin: auto;
+  height: 20rem;
+  width: 30rem;
+  object-fit: fill;
+}
+
+.project-container .project-section:nth-child(1n) div {
+  grid-column: 2 / span 1;
+  margin: auto;
+}
+
+.project-container .project-section:nth-child(2n) img {
+  grid-column: 2 / span 1;
+  margin: auto;
+}
+
+.project-container .project-section:nth-child(2n) div {
+  grid-column: 1 / span 1;
+  grid-row: 1 / span 1;
+  margin: auto;
+}

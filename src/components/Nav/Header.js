@@ -17,6 +17,7 @@ function Header(props) {
     <div className="header-container">
       <div>
         <span>Nathan</span>
+        <span>{link.name}</span>
         {modal ? (
           <i className="fas fa-times" onClick={() => {setModal(false)}}></i>
         ) : (
@@ -26,7 +27,7 @@ function Header(props) {
       {modal === true && (
         <div className="header-link">
           {links.map((link) => (
-              <Link to={link.href} className="link-style" onClick={() => {setLink(link)}}>{link.name}</Link>
+              <Link to={link.href} className="link-style" onClick={() => {setLink(link); setModal(false)}}>{link.name}</Link>
           ))}
         </div>
       )}

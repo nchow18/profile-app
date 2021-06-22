@@ -67,30 +67,16 @@ function Portfolio() {
   const [currentProject, setCurrentProject] = useState(categories[0]);
 
   return (
-    <section>
-      <div className="page-format">
-        {categories.map((link) => (
-          <div className="input-display"><input key={link.name} type="checkbox" id={link.label} /></div>
-        ))}
-        <div className="page-content portfolio-content">
-        <input type="checkbox" id="portfolio-list" />
-          <div className="portfolio-menu">
-            <div className="portfolio-dropdown">
-              {categories.map((link) => (
-                <label key={link.label} for={link.label} onClick={() => (setCurrentProject(link))}><span>{link.name}</span></label>
-              ))}
-            </div>
-            <label htmlFor="portfolio-list"><i class="fas fa-cookie-bite portfolio-icon"></i></label>
-          </div>
-          <div className="portfolio-container">
-              <ProjectDetails 
-                categories={categories}
-                currentProject={currentProject}
-                setCurrentProject={setCurrentProject}
-                 />
-        </div>
-        </div>
-      </div>
+    <section className="project-container">
+     {categories.map((link) => (
+       <div className="project-section">
+         <img src={link.img} alt={link.name} onClick={() =>{window.open(link.link)}}/>
+         <div>
+           <span><b>{link.name}</b></span>
+           <p>{link.details}</p>
+         </div>
+       </div>
+     ))}
     </section>
   );
 }
