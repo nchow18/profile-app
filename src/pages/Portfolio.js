@@ -9,7 +9,7 @@ function Portfolio() {
     {
       name: 'Day Scheduler',
       link: 'https://nchow18.github.io/work-day-scheduler/',
-      img: 'https://raw.githubusercontent.com/nchow18/profile-app/main/src/assets/img/scheduler.png',
+      img: 'https://raw.githubusercontent.com/nchow18/profile-app/feature/new/src/assets/img/scheduler.png',
       github: 'https://github.com/nchow18/work-day-scheduler',
       label: 'day-schedule',
       details: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed feugiat erat. Praesent in dignissim justo, posuere scelerisque urna. Morbi accumsan lorem at condimentum facilisis. Vestibulum dictum dolor eget consectetur iaculis. Cras at nunc vel metus scelerisque rutrum sit amet sed nulla. Aliquam eu dolor eget eros convallis rutrum. Maecenas blandit dui ex, a fringilla risus fringilla sagittis.'
@@ -17,7 +17,7 @@ function Portfolio() {
     {
       name: 'Envoy',
       link: 'https://envoy-guide.herokuapp.com/',
-      img: 'https://raw.githubusercontent.com/nchow18/profile-app/main/src/assets/img/envoy.png',
+      img: 'https://raw.githubusercontent.com/nchow18/profile-app/feature/new/src/assets/img/envoy.png',
       github: 'https://github.com/Envoy-products',
       label: 'envoy-port',
       details: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed feugiat erat. Praesent in dignissim justo, posuere scelerisque urna. Morbi accumsan lorem at condimentum facilisis. Vestibulum dictum dolor eget consectetur iaculis. Cras at nunc vel metus scelerisque rutrum sit amet sed nulla. Aliquam eu dolor eget eros convallis rutrum. Maecenas blandit dui ex, a fringilla risus fringilla sagittis.'
