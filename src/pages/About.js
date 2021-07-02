@@ -15,9 +15,11 @@ function About() {
     }
   }
 
+  photosArr();
+
   useEffect(() => {
     photosArr();
-  },[])
+  })
 
   const [currentPhoto, setPhoto] = useState(photos[0])
 
