@@ -10,13 +10,27 @@
 }
 
 .header-container div:nth-child(1) {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
   height: 100%;
   width: 100%;
   position: relative;
   z-index: 11;
+}
+
+.header-container div:nth-child(1) span:nth-child(1) {
+  position: relative;
+  left: 0;
+}
+
+.header-container div:nth-child(1) span:nth-child(2) {
+  position: relative;
+  margin: auto;
+}
+
+.header-container div:nth-child(1) i {
+  position: absolute;
+  right: 0;
 }
 
 .header-container div:nth-child(1) * {
@@ -38,7 +52,8 @@ i {
 .header-link {
   color: white;
   display: flex;
-  justify-content: center;
+  padding-top: 3rem;
+  justify-content: flex-start;
   flex-direction: column;
   align-items: center;
   height: 100vh;
