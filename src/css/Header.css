@@ -59,7 +59,7 @@ i {
   height: 100vh;
   width: 100%;
   background-color: black;
-  animation: dropDown 1s forwards;
+  animation: dropDown .5s forwards;
   animation-timing-function: var(--cubic);
 }
 
