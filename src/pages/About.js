@@ -7,19 +7,15 @@ function About() {
 
   const [isModal, setModal] = useState(false)
 
-  const [photos] = useState([]);
+  var [photos] = useState([]);
 
-  function photosArr() {
-    for (var i = 1; i < 35; i++) {
-      photos.push(i)
-    }
+  photos = [];
+
+  for (var i = 1; i < 35; i++) {
+    photos.push(i)
   }
 
-  photosArr();
 
-  useEffect(() => {
-    photosArr();
-  })
 
   const [currentPhoto, setPhoto] = useState(photos[0])
 
@@ -38,7 +34,7 @@ function About() {
       </div>
       <div className="pictures-container">
         {photos.map((photo) => (
-          <img alt="ig" onClick={() => {setModal(true); setPhoto(photo)}} src={process.env.PUBLIC_URL + `/ig/${photo}.png`}/>
+          <img key={photo} alt="ig" onClick={() => {setModal(true); setPhoto(photo)}} src={process.env.PUBLIC_URL + `/ig/${photo}.png`}/>
         ))}
         {isModal === true && (
           <div className="pictures-modal">

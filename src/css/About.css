@@ -40,9 +40,16 @@
   padding: 2rem;
 }
 
-.pictures-container img {
+.pictures-container > img:hover {
+  transition: .8s;
+  filter: grayscale(0%);
+}
+
+.pictures-container > img {
   object-fit: contain;
   width: 100%;
+  filter: grayscale(100%);
+  transition: .8s;
 }
 
 .pictures-modal {

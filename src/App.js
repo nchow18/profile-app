@@ -13,6 +13,7 @@ import Dropdown from './components/Nav/Dropdown';
 import Auth from './utils/Auth';
 import './css/Pages.css';
 import { HeaderLinks } from './utils/helpers';
+import Projects from './pages/Projects';
 
 function App() {
 
@@ -46,15 +47,15 @@ function App() {
       emojiClass: 'portfolio-emoji',
       linkClass: 'portfolio-link',
     },
-    {
-      name: 'Resume',
-      href: '/resume',
-      label: 'resume-page',
-      key: 'resume',
-      emoji: 'fas fa-newspaper',
-      emojiClass: 'resume-emoji',
-      linkClass: 'resume-link',
-    },
+    // {
+    //   name: 'Resume',
+    //   href: '/resume',
+    //   label: 'resume-page',
+    //   key: 'resume',
+    //   emoji: 'fas fa-newspaper',
+    //   emojiClass: 'resume-emoji',
+    //   linkClass: 'resume-link',
+    // },
     {
       name: 'Contact',
       href: '/contact',
@@ -82,6 +83,7 @@ function App() {
           <Route exact path="/portfolio" component={Portfolio}/>
           <Route exact path="/resume" component={Resume}/>
           <Route exact path="/contact" component={Contact}/>
+          <Route exact path="/projects" component={Projects}/>
         </div>
       </Switch>
       </div>

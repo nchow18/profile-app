@@ -1,13 +1,30 @@
 .project-container {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  align-items: center;
+  height: 100%;
   max-width: 1200px;
   width: 100%;
-  background-color: white;
-  scroll-snap-type: y mandatory;
+  background-color: black;
+  color: white;
+}
+
+.project-container > div:nth-child(1) {
+  /* scroll-snap-type: y mandatory; */
   overflow-y: scroll;
   scroll-behavior: smooth;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project-container > div > span:nth-child(1) {
+  scroll-snap-align: start;
+  font-size: 2rem;
+  font-weight: bold;
+  padding-top: 1rem;
 }
 
 ::-webkit-scrollbar {
@@ -15,16 +32,127 @@
   width: 0;
 }
 
+i {
+  color: white;
+  transition: .4s;
+}
+
+i:hover {
+  color: rgb(239,239,208);
+  transition: .4s;
+}
+
 .project-section {
-  height: 100vh;
+  height: 40vh;
   display: grid;
   grid-template-columns: 50% 50%;
+  grid-gap: 1rem;
   padding: 1rem;
   scroll-snap-align: start;
+  position: relative;
+}
+
+.project-section > div > p {
+  /* background-color: rgb(26,101,158); */
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px rgb(0,0,0,0.3);
+  border: 3px solid white;
+  transition: 1s;
+}
+
+.project-section > div > i {
+  margin-right: .5rem;
+}
+
+.project-section > div > span {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.project-section > div > p:hover {
+  /* box-shadow: 5px 5px 10px rgb(26,101,158,0.7); */
+  background-color: white;
+  color: black;
+  transition: 1s;
+}
+
+.others-container {
+  display: flex;
+  flex-direction: column;
+  scroll-snap-align: start;
+  padding: 1rem;
+  align-items: center;
+}
+
+.others-container > span {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.other-projects {
+  display: grid;
+  grid-template-columns: 32% 32% 32%;
+  grid-gap: 1rem;
+  height: 100%;
+  width: 95%;
+  flex-wrap: wrap;
+  padding: 1rem;
+}
+
+.others-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: .25rem solid white;
+  padding: 1rem;
+}
+
+.others-section:hover {
+  position: relative;
+  animation: box-hover 1s forwards;
+}
+
+.others-section:hover div > i {
+  color: black;
+  transition: 1s
+}
+
+@keyframes box-hover {
+  from {
+    top: 0rem;
+  }
+  to {
+    top: -.5rem;
+    background-color: white;
+    color: black;
+  }
+}
+
+.others-section div:nth-child(1) > i {
+  padding: .5rem;
+}
+
+.others-section > p {
+  font-size: .8rem;
+}
+
+.other-section span:nth-child(1) {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.project-section > img {
+  filter: grayscale(100%);
+  transition: 1s;
+}
+
+.project-section > img:hover {
+  transition: 1s;
+  filter: none;
 }
 
 .project-container .project-section:nth-child(2n) {
-  background-color: rgb(145, 145, 145);
   color: white;
 }
 
@@ -52,6 +180,19 @@
   margin: auto;
 }
 
+@media screen and (max-width: 850px) {
+  .project-section {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+
+  .other-projects {
+    grid-template-columns: 48% 48%;
+  }
+
+}
+
 @media screen and (max-width: 500px) {
   .project-container * {
     font-size: .7rem;
@@ -60,5 +201,30 @@
   .project-section {
     display: flex;
     flex-direction: column;
+    height: auto;
+  }
+
+  .other-projects {
+    grid-template-columns: auto;
+  }
+
+  .project-section > div > span {
+    font-size: 1.5rem;
+  }
+
+  .others-container > span {
+    font-size: 1rem;
+  }
+
+  .project-container > div > span:nth-child(1) {
+    font-size: 1rem;
+  }
+
+  .others-section > div > i {
+    font-size: 1.5rem;
+  }
+
+  .project-section > div > i {
+    font-size: 1.5rem;
   }
 }

@@ -2,10 +2,14 @@ import React from 'react';
 import '../css/Home.css';
 import '../App.css';
 import Pole from '../assets/pole.JPG'
+import Load from './Load';
 
 function Home() {
   return (
     <section>
+      <div className="page-load">
+        <Load />
+      </div>
       <div className="page-format">
         <div className="page-content home-content">
           <img src={Pole} alt="pole"/>

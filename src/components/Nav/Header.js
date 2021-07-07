@@ -16,7 +16,7 @@ function Header(props) {
   return (
     <div className="header-container">
       <div>
-        <span>Nathan</span>
+        <span onClick={() => {window.location.assign('/')}}>Nathan</span>
         <span>{link.name}</span>
         {modal ? (
           <i className="fas fa-times" onClick={() => {setModal(false)}}></i>
@@ -29,6 +29,7 @@ function Header(props) {
           {links.map((link) => (
               <Link to={link.href} className="link-style" onClick={() => {setLink(link); setModal(false)}}>{link.name}</Link>
           ))}
+          <a className="link-style" onClick={() => {setModal(false)}} href={process.env.PUBLIC_URL + `/resume/Resume-2021.pdf`}>Resume</a>
         </div>
       )}
 

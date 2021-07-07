@@ -29,7 +29,7 @@
       "react-app/jest"
     ]
   },
-  "homepage": "http://nchow18.github.io/profile-app",
+  "homepage": "http://nathanchow.ca",
   "browserslist": {
     "production": [
       ">0.2%",
