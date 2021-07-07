@@ -5,15 +5,11 @@ import './css/Header.css';
 import About from './pages/About';
 import Portfolio from './pages/Portfolio';
 import Contact from './pages/Contact';
-import Resume from './pages/Resume';
 import Header from './components/Nav/Header';
 import Footer from './components/Footer';
 import Home from './pages/Home';
-import Dropdown from './components/Nav/Dropdown';
 import Auth from './utils/Auth';
 import './css/Pages.css';
-import { HeaderLinks } from './utils/helpers';
-import Projects from './pages/Projects';
 
 function App() {
 
@@ -81,9 +77,7 @@ function App() {
           <Route exact path="/" component={Home}/>
           <Route exact path="/about" component={About}/>
           <Route exact path="/portfolio" component={Portfolio}/>
-          <Route exact path="/resume" component={Resume}/>
           <Route exact path="/contact" component={Contact}/>
-          <Route exact path="/projects" component={Projects}/>
         </div>
       </Switch>
       </div>
