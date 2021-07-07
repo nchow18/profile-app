@@ -52,6 +52,10 @@ i:hover {
   position: relative;
 }
 
+.project-section > div {
+  padding: 1rem;
+}
+
 .project-section > div > p {
   /* background-color: rgb(26,101,158); */
   padding: 1rem;
