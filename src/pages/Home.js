@@ -22,7 +22,7 @@ function Home() {
               <li>I lived in <b>Vietnam</b></li>
               <li>I watch a lot of <b>movies</b> and TV series</li>
               <li>I am also a Mortgage Agent at <b>JP Mortgages</b></li>
-              <li>I love <b>travelling</b> and traveled to majority of East Asia</li>
+              <li>I love <b>traveling</b> and traveled to majority of East Asia</li>
               <li>I love creating and writing <b>code</b></li>
               <li>My favourite pastimes is exploring great <b>Food</b> and sharing the experience on <b>Social Media</b></li>
             </ul>
