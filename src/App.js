@@ -52,18 +52,19 @@ function App() {
     //   emojiClass: 'resume-emoji',
     //   linkClass: 'resume-link',
     // },
-    {
-      name: 'Contact',
-      href: '/contact',
-      label: 'contact-page',
-      key: 'contact',
-      emoji: 'fas fa-id-card',
-      emojiClass: 'contact-emoji',
-      linkClass: 'contact-link',
-    }
+    // {
+    //   name: 'Contact',
+    //   href: '/contact',
+    //   label: 'contact-page',
+    //   key: 'contact',
+    //   emoji: 'fas fa-id-card',
+    //   emojiClass: 'contact-emoji',
+    //   linkClass: 'contact-link',
+    // }
   ])
 
   const [link, setLink] = useState(links[0])
+  const [isContactModal, setContactModal] = useState(false);
  
   return (
     <Router>
@@ -72,12 +73,27 @@ function App() {
         link={link}
         setLink={setLink}
         links={links} />
+      <div className="contact-link">
+        <span onClick={() => {setContactModal(true)}}>Contact</span> 
+      </div>
+      {isContactModal === true && (
+        <Contact setContactModal={setContactModal} />
+      )}
+      <div className="social-links">
+        <i class="fab fa-github" onClick={() => {window.open('https://github.com/nchow18')}}></i>
+        <i class="fab fa-instagram" onClick={() => {window.open('https://www.instagram.com/_nathan_chow/')}}></i>
+        <i class="fab fa-linkedin-in" onClick={() => {window.open('https://www.linkedin.com/in/nathan-chow-1999701b9/')}}></i>
+        <i class="far fa-dot-circle"></i>
+      </div>
+      <div className="email-links">
+        <span>emailme@nathanchow.ca</span>
+        <i class="far fa-dot-circle"></i>
+      </div>
       <Switch >
         <div className="content">
           <Route exact path="/" component={Home}/>
           <Route exact path="/about" component={About}/>
           <Route exact path="/portfolio" component={Portfolio}/>
-          <Route exact path="/contact" component={Contact}/>
         </div>
       </Switch>
       </div>

@@ -1,20 +1,21 @@
 import React, { useState } from 'react';
-import { validateEmail } from '../utils/helpers';
 import '../css/Contact.css';
 
-function Contact() {
+function Contact(props) {
 
+  const {
+    setContactModal
+  } = props
 
     return (
-        <section>
-      <div className="page-format">
-        <div className="page-content contact-content">
-          <div className="contact-font">
-            ABOUT
-          </div>
+      <div className="contact-modal" onClick={() => {setContactModal(false)}}>
+        <div>
+          <span><i class="fab fa-github" onClick={() => {window.open('https://github.com/nchow18')}}></i></span>
+          <span><i class="fab fa-instagram" onClick={() => {window.open('https://www.instagram.com/_nathan_chow/')}}></i></span>
+          <span><i class="fab fa-linkedin-in" onClick={() => {window.open('https://www.linkedin.com/in/nathan-chow-1999701b9/')}}></i></span>
+          <span>emailme@nathanchow.ca</span>
         </div>
       </div>
-        </section>
     )
 }
 
