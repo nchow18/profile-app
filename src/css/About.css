@@ -93,3 +93,9 @@
     width: 90%;
   }
 }
+
+@media screen and (max-width: 500px) {
+  .about-details {
+    font-size: .8rem;
+  }
+}
