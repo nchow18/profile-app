@@ -162,11 +162,15 @@ function Portfolio() {
   const [currentProject, setCurrentProject] = useState(categories[0]);
   const [isPortfolioModal, setPortfolioModal] = useState(false)
 
+  function scrollTop() {
+    window.scrollTo(0,0);
+  }
+
   return (
     <>
       {isPortfolioModal ? (
         <section className="archive-container">
-          <span onClick={() => {setPortfolioModal(false)}}><i className="fas fa-arrow-left"></i>Back to Portfolio</span>
+          <span onClick={() => {setPortfolioModal(false); scrollTop()}}><i className="fas fa-arrow-left"></i>Back to Portfolio</span>
           <span>Projects Archive</span>
           <span>A list of small accomplishments</span>
           <div className="archive-section">
@@ -205,7 +209,7 @@ function Portfolio() {
           </div>
           <div className="others-container">
             <span>Other Awesome Projects</span>
-            <p onClick={() => {setPortfolioModal(true)}}>View Archive</p>
+            <p onClick={() => {setPortfolioModal(true); scrollTop()}}>View Archive</p>
             <div className="other-projects">
               {categories.map((link) => (
               <div className="others-section">
