@@ -94,6 +94,14 @@ i:hover {
   font-weight: bold;
 }
 
+.others-container > p:hover {
+  border-bottom: 2px dashed white;
+  border-left: 2px solid white;
+  border-top: 2px solid white;
+  border-right: 2px solid white;
+  padding: 0 .5rem;
+}
+
 .other-projects {
   display: grid;
   grid-template-columns: 32% 32% 32%;
@@ -184,6 +192,81 @@ i:hover {
   margin: auto;
 }
 
+.archive-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  max-width: 1000px;
+  width: 90%;
+  background-color: black;
+  color: white;
+  margin-top: 3rem;
+}
+
+.archive-container > span:nth-child(1) {
+  margin-bottom: 2rem;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.archive-container > span:nth-child(1) > i {
+  font-size: 1rem;
+  margin-right: 1rem;
+}
+
+.archive-container > span:nth-child(1):hover {
+  font-size: 1rem;
+  margin-right: 1rem;
+  font-weight: bold;
+}
+
+.archive-container > span:nth-child(2) {
+  font-size: 2rem;
+  font-weight: bold;
+  border-bottom: 2px dashed white;
+  padding-bottom: 1rem;
+}
+
+.archive-container > span:nth-child(3) {
+  margin-top: 1rem;
+}
+
+.archive-section {
+  margin-top: 5rem;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  width: 100%;
+}
+
+.archive-section > b {
+  height: 4rem;
+}
+
+.archive-section > span {
+  font-family: 'Courier New', Courier, monospace;
+  padding-right: .5rem;
+}
+
+.year-text {
+  height: 2.5rem;
+  color: rgb(0, 213, 0);
+  font-weight: bold;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.name-text {
+  font-weight: bold;
+}
+
+.tech-text {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+
+.archive-section > span > i {
+  font-size: 1.5rem;
+  padding: .25rem;
+}
+
 @media screen and (max-width: 850px) {
   .project-section {
     display: flex;
@@ -230,5 +313,32 @@ i:hover {
 
   .project-section > div > i {
     font-size: 1.5rem;
+  }
+
+  .archive-section > b {
+    font-size: .8rem;
+    height: 2rem;
+  }
+
+  .archive-container > span:nth-child(1) {
+    font-size: .8rem;
+  }
+
+  .archive-container > span:nth-child(2) {
+    font-size: 1.25rem;
+  }
+
+  .archive-container > span:nth-child(3) {
+    font-size: .8rem;
+  }
+
+  .archive-section > span {
+    font-size: .7rem;
+    height: auto;
+  }
+
+  .archive-section > span > i {
+    font-size: 1rem;
+    padding: .25rem;
   }
 }
